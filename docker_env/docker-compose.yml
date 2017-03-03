@@ -1,0 +1,23 @@
+version: '2.0'
+services:
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=whehehe
+      - MYSQL_DATABASE=sjdat
+      - MYSQL_USER=sjdatuser
+      - MYSQL_PASSWORD=sjdatpw
+    volumes:
+      - data-volume:/var/lib/mysql
+  web:
+    build: .
+    command: /setup/wait-for-it.sh -t 0 db:3306 -- python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - /Users/ethan/p/sj-construction/src:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+    data-volume:

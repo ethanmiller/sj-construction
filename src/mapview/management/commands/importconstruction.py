@@ -20,6 +20,10 @@ class Command(BaseCommand):
         parser.add_argument('csv_file', type=str)
 
     def _model_or_none(self, m, name):
+        """
+        Returns a Django object for the given model and name, or None if the name is a None type value.
+        Keeps objects cached to reduce DB lookups during import.
+        """
         if name.strip() in ('', ',', 'NONE'):
             return None
         else:

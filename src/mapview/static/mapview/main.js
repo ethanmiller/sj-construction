@@ -88,9 +88,6 @@ var Map = React.createClass({
         });
     },
 	render: function(){
-            //var marker = new mapboxgl.Marker()
-              //.setLngLat([parseFloat(f.longitude), parseFloat(f.latitude)])
-              //.addTo(this.state.map);
 		return (
 			<div className='col-md-8'>
       			<div id='map' style={mapStyle}></div>

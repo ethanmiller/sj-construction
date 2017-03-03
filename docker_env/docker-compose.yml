@@ -3,7 +3,7 @@ services:
   db:
     image: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=whehehe
+      - MYSQL_ROOT_PASSWORD=whehehe # for dev environment
       - MYSQL_DATABASE=sjdat
       - MYSQL_USER=sjdatuser
       - MYSQL_PASSWORD=sjdatpw

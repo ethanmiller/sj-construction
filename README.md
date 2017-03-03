@@ -5,7 +5,7 @@ San Jose City API located here: http://data.sanjoseca.gov/developers/
 
 ## Active Building permits
 
-(example using httpie https://github.com/jkbrzt/httpie )
+(example using httpie https://github.com/jkbrzt/httpie API key available at link above)
 ```sh
 http http://api.data.sanjoseca.gov/api/v2/datastreams/ACTIV-BUILD-PERMI/data.json/ auth_key==xxyyzz limit==50
 ```
